@@ -13,7 +13,7 @@
   <body>
   	<div style="text-align:center;">
 		<div id="intro" style="width: 100%; padding:40px; text-align:center;">
-	        <h1>Cooperative Exploration for Multi-Agent Deep Reinforcement Learning</h1>
+	        <h1>Cooperative Exploration for <br> Multi-Agent Deep Reinforcement Learning</h1>
 	    </div>
 		<div class="container">
 		  <div class="row">
@@ -41,13 +41,13 @@
 		   	<h4> International Conference on Machine Learning (ICML), 2021 </h4>
 		    </div>
 		  </div>
-		  <!--
+		  
 		  <div class="row">
 		  			    <div class="col-lg">
 		    <center><h2><strong>
-	<a href="https://papers.nips.cc/paper/2020/file/c6447300d99fdbf4f3f7966295b8b5be-Paper.pdf">Paper</a> |
-	<a href="https://github.com/IouJenLiu/HTS-RL">Code</a> |
-	<a href="./files/presentation.ppsm">Slides</a> |
+	<a href="http://proceedings.mlr.press/v139/liu21j/liu21j.pdf">Paper</a> |
+	<!-- <a href="https://github.com/IouJenLiu/HTS-RL">Code</a> | -->
+	<a href="./files/talk_slides.pdf">Slides</a> |
     <a href="./files/bib.txt">Bibtex</a> </strong> </h2></center> 
 			</div>
 		  </div>
@@ -55,7 +55,7 @@
 		  
 		  <div class="row">
 		  	<div class="col-lg">
-		  	<img src="./figs/flow_all_v3.png" class="img-fluid">
+		  	<img src="./files/flow.png" class="img-fluid" style="width:509px;height:400px;">
 		  	</div>
 		  </div>
 
@@ -67,7 +67,20 @@
 		  </div>
 		  <div class="row">
 		  	<div style="font-size:16px"><p align="justify">
-		  		Various parallel actor-learner methods reduce long training times for deep reinforcement learning. Synchronous methods enjoy training stability while having lower data throughput. In contrast, asynchronous methods achieve high throughput but suffer from stability issues and lower sample efficiency due to ‘stale policies’. To combine the advantages of both methods we propose High-Throughput Synchronous Deep Reinforcement Learning (HTS-RL). In HTS-RL, we perform learning and rollouts concurrently, devise a system design which avoids ‘stale policies’ and ensure that actors interact with environment replicas in an asynchronous manner while maintaining full determinism. We evaluate our approach on Atari games and the Google Research Football environment. Compared to synchronous baselines, HTS-RL is 2 − 6X faster. Compared to state-of-the-art asynchronous methods, HTS-RL has competitive throughput and consistently achieves higher average episode rewards.
+		  		Exploration is critical for good results in deep reinforcement learning and has attracted much attention. However, existing multi-agent deep reinforcement learning algorithms still use mostly
+				noise-based techniques. Very recently, exploration methods that consider cooperation among
+				multiple agents have been developed. However,
+				existing methods suffer from a common challenge: agents struggle to identify states that are
+				worth exploring, and hardly coordinate exploration efforts toward those states. To address
+				this shortcoming, in this paper, we propose cooperative multi-agent exploration (CMAE): agents
+				share a common goal while exploring. The goal
+				is selected from multiple projected state spaces
+				via a normalized entropy-based technique. Then,
+				agents are trained to reach this goal in a coordinated manner. We demonstrate that CMAE
+				consistently outperforms baselines on various
+				tasks, including a sparse-reward version of the
+				multiple-particle environment (MPE) and the
+				Starcraft multi-agent challenge (SMAC).
 		  	</p>
 		  	</div>
 		  </div>
@@ -80,35 +93,35 @@
 		  </div>
 		  <div class="row">
 		    <div class="col-lg">
-		    	<a href="https://papers.nips.cc/paper/2020/file/c6447300d99fdbf4f3f7966295b8b5be-Paper.pdf">
-          			<img src="figs/paper_thumb.png" style="height:270px" class="img-fluid" alt="Responsive image">
+		    	<a href="http://proceedings.mlr.press/v139/liu21j/liu21j.pdf">
+          			<img src="files/paper_thumb.png" style="height:270px" class="img-fluid" alt="Responsive image">
           		</a>
           	  <br>
-		      <a href="https://papers.nips.cc/paper/2020/file/c6447300d99fdbf4f3f7966295b8b5be-Paper.pdf"><button type="button" class="btn btn-secondary">Paper</button></a>           
+		      <a href="http://proceedings.mlr.press/v139/liu21j/liu21j.pdf"><button type="button" class="btn btn-secondary">Paper</button></a>           
 		    </div>
 		    <div class="col-lg">
 		      <a href="./files/poster.pdf">
-          			<img src="figs/poster_thumb.png" style="height:270px" class="img-fluid" alt="Responsive image">
+          			<img src="files/poster_thumb.png" style="width:400px" class="img-fluid" alt="Responsive image">
           		</a>
           	  <br>
 		      <a href="./files/poster.pdf"><button type="button" class="btn btn-secondary">Poster</button></a>   
 		    </div>
-		    <div class="col-lg">
+		   <!-- <div class="col-lg">
 		      <a href="https://github.com/IouJenLiu/HTS-RL">
 		    		<img src="figs/code_thumb.jpg" style="height:270px" class="img-fluid" alt="Responsive image">
 		    	</a>
 		      <br>
 		      <a href="https://github.com/IouJenLiu/HTS-RL"><button type="button" class="btn btn-secondary">Code</button></a>  
-		    </div>
-		  </div>
+		    </div> -->
+		  </div> 
 
 		  <br><br>
 		  <div class="row">
 		  	<div class="col-lg">
-		  		<h2> Presentation </h2> <p></p>
-		  		<div class="embed-responsive embed-responsive-16by9">
-				  <video width="800" height="480" controls preload="auto"><source src="./files/HTS-RL.mp4" type="video/mp4"></video>
-				</div>
+		  		<h2>Presentation</h2>
+			    <div class=text-center>
+			    <iframe width="560" height="315" src="https://www.youtube.com/embed/rQZHawgqgsk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			    </div>
 		  	</div>
 		  </div>
 
@@ -117,11 +130,11 @@
 		  	<div class="col-sm">
 		  		<h2> Citation </h2>
 		  		    <pre align="left">
-@inproceedings{LiuNEURIPS2020,
-  author = {I.-J. Liu and R.~A. Yeh and A.~G. Schwing},
-  title = {{High-Throughput Synchronous Deep RL}},
-  booktitle = {Proc. NeurIPS},
-  year = {2020},
+@inproceedings{LiuICML2021,
+  author = {I.-J. Liu and U. Jain and R.~A. Yeh and A.~G. Schwing},
+  title = {{Cooperative Exploration for Multi-Agent Deep Reinforcement Learning}},
+  booktitle = {Proc. ICML},
+  year = {2021},
 }
 </pre>
 			</div>
@@ -131,7 +144,7 @@
 		  	<div class="col-sm">
 		  		<h2> Acknowledgement </h2>
 		  		<p align="left">
-	This work is supported in part by NSF under Grant # 1718221, 2008387 and MRI #1725729, NIFA award 2020-67021-32799, UIUC, Samsung, Amazon, 3M, Cisco Systems Inc. (Gift Award CG 1377144), and a Google PhD Fellowship to RY. We thank Cisco for access to the Arcetri cluster.
+	This work is supported in part by NSF under Grant #1718221, 2008387, 2045586, and MRI #1725729, UIUC, Samsung, Amazon, 3M, and Cisco Systems Inc. RY is supported by a Google Fellowship.
     <br><br>
 		  	</div>
 		  </div>		  
@@ -147,6 +160,6 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    -->
+   
   </body>
 </html>

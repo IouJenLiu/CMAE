@@ -1,0 +1,6 @@
+@inproceedings{LiuICML2021,
+  author = {I.-J. Liu and U. Jain and R.~A. Yeh and A.~G. Schwing},
+  title = {{Cooperative Exploration for Multi-Agent Deep Reinforcement Learning}},
+  booktitle = {Proc. ICML},
+  year = {2021},
+}
