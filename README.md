@@ -6,7 +6,7 @@
 University of Illinois at Urbana-Champaign<br/>
 
 
-The repository contains Python implementation of Cooperative Exploration for Multi-Agent Deep Reinforcement Learning (CMAE) on the discrete multi-agent particle environments (MPE).
+The repository contains Python implementation of Cooperative Exploration for Multi-Agent Deep Reinforcement Learning (CMAE) with Q-Learning on the discrete multi-agent particle environments (MPE).
 
 If you used this code for your experiments or found it helpful, please consider citing the following paper:
 
