@@ -9,6 +9,7 @@ BOT = 1
 LEFT = 2
 RIGHT = 3
 
+
 class Box(Entity):
     def __init__(self, x, y):
         super(Box, self).__init__(x, y)
@@ -60,7 +61,6 @@ class PushBox(object):
         self.done = True if self.step_count == self.H or rew >= 1 else False
 
         return np.array(obs), rew, self.done
-
 
     def _compute_force(self, actions):
         # compute force on the box

@@ -1,4 +1,6 @@
 DIGITS = '0123456789abcdefghijklmnopqrstuvwxyz'
+import numpy as np
+import copy
 
 
 def convert_to_base(decimal_number, base):
@@ -14,6 +16,29 @@ def convert_to_base(decimal_number, base):
         new_digits.append(DIGITS[remainder_stack.pop()])
 
     return ''.join(new_digits)
+
+
+def int_to_obs(int_rep, base, raw_dim):
+    """
+
+    :param int_rep: int or 1-d numpy array
+    :param base:
+    :param raw_dim:
+    :return: np array (bz, raw_dim)
+    """
+    if not isinstance(int_rep, np.ndarray):
+        int_rep = np.array([int_rep])
+    bz = int_rep.size
+    obs = np.zeros((bz, raw_dim), dtype=np.int64)
+    q = int_rep
+    for d in range(raw_dim):
+        q, r = divmod(q, base)
+        obs[:, - (d + 1)] = r.reshape(-1)
+    if raw_dim == 5:
+        obs_first_col = copy.deepcopy(obs[:, 0])
+        obs[:, [0,1,2,3]] = obs[:, [1,2,3,4]]
+        obs[:, -1] = obs_first_col
+    return obs
 
 
 def obs_to_int_pi(obs, base, raw_dim):

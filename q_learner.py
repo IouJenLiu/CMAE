@@ -1,5 +1,5 @@
 import random
-from utils.convert2base import s_to_sp
+from utils.convert2base import s_to_sp, int_to_obs
 import numpy as np
 import collections
 from scipy.stats import entropy
