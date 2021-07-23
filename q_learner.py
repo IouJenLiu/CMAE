@@ -1,5 +1,6 @@
 import random
-from utils.convert2base import *
+from utils.convert2base import s_to_sp
+import numpy as np
 import collections
 from scipy.stats import entropy
 import scipy
